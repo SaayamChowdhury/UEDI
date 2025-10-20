@@ -25,6 +25,7 @@ This repository contains Python implementations for computing two multidomain in
 Clone the repository:
 
 ```bash
-git clone https://github.com/SaayamChowdhury/UEDI.git
-cd UEDI
+git clone https://github.com/saayamchowdhury/uedi-qsi-indices.git
+cd uedi-qsi-indices
+
 
