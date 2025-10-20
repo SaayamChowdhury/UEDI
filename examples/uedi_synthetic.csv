@@ -1,0 +1,19 @@
+jurisdiction,year,domain,indicator,value
+A,2020,Access & Participation,Access_ind1,45
+A,2020,Access & Participation,Access_ind2,55
+A,2020,Access & Participation,Access_ind3,50
+A,2020,Learning & Skills,Learn_ind1,60
+A,2020,Learning & Skills,Learn_ind2,65
+A,2020,Learning & Skills,Learn_ind3,70
+B,2020,Access & Participation,Access_ind1,35
+B,2020,Access & Participation,Access_ind2,40
+B,2020,Access & Participation,Access_ind3,38
+B,2020,Learning & Skills,Learn_ind1,55
+B,2020,Learning & Skills,Learn_ind2,50
+B,2020,Learning & Skills,Learn_ind3,60
+C,2020,Access & Participation,Access_ind1,70
+C,2020,Access & Participation,Access_ind2,65
+C,2020,Access & Participation,Access_ind3,68
+C,2020,Learning & Skills,Learn_ind1,75
+C,2020,Learning & Skills,Learn_ind2,80
+C,2020,Learning & Skills,Learn_ind3,78
