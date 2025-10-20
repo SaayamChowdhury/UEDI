@@ -1,20 +1,25 @@
-# Index Comparison Demo Notebook
+# ==============================
+# Index Comparison Demo Script
+# ==============================
 
 # Cell 1: Markdown
-"""
-# Comparing UEDI & QSI
-This notebook shows a side-by-side comparison of UEDI and QSI using synthetic datasets.
-"""
+# # Comparing UEDI & QSI
+# This script shows a side-by-side comparison of UEDI and QSI using synthetic datasets.
 
 # Cell 2: Imports
 import pandas as pd
+import matplotlib.pyplot as plt
 from uedi import compute_uedi
 from qsi import qsi_pipeline
-import matplotlib.pyplot as plt
 
 # Cell 3: Load datasets
 uedi_df = pd.read_csv("../examples/uedi_synthetic.csv")
 qsi_df = pd.read_csv("../examples/qsi_synthetic.csv")
+
+print("UEID dataset head:")
+print(uedi_df.head())
+print("\nQSI dataset head:")
+print(qsi_df.head())
 
 # Cell 4: Compute indices
 uedi_res = compute_uedi(uedi_df, n_boot=100, random_state=42)
@@ -27,6 +32,7 @@ domain_cols = [
     "Cognitive Function",
     "Engagement",
 ]
+
 sem_cols = [
     "Emotional_sem",
     "Motivation_sem",
@@ -52,5 +58,5 @@ plt.bar(["UEDI"], [uedi_res['uedi_mean'].mean()], color='skyblue', label='UEDI')
 plt.bar(["QSI"], [qsi_res["bootstrap_summary"]["theory"]["mean"]], color='salmon', label='QSI')
 plt.title("Average Index Comparison")
 plt.ylabel("Index Score")
-plt.ylim(0,100)
+plt.ylim(0, 100)
 plt.show()
