@@ -1,18 +1,19 @@
-# QSI Demo Notebook
+# ==============================
+# QSI Demo Script (Python)
+# ==============================
 
 # Cell 1: Markdown
-"""
-# QSI Demo
-This notebook demonstrates computing **Quality of Student Experience (QSI)** composites using synthetic data.
-"""
+# # QSI Demo
+# This script demonstrates computing **Quality of Student Experience (QSI)** composites using synthetic data.
 
 # Cell 2: Imports
 import pandas as pd
+import matplotlib.pyplot as plt
 from qsi import qsi_pipeline
 
 # Cell 3: Load synthetic QSI data
 df = pd.read_csv("../examples/qsi_synthetic.csv")
-df.head()
+print(df.head())
 
 # Cell 4: Define domain and SEM columns
 domain_cols = [
@@ -38,7 +39,7 @@ result = qsi_pipeline(
     df,
     domain_cols,
     sem_cols=sem_cols,
-    strata_cols=["grade_band","language"],
+    strata_cols=["grade_band", "language"],
     outcome_col="GPA",
     bootstrap_iters=50,
     pv_draws=3,
@@ -46,11 +47,10 @@ result = qsi_pipeline(
 )
 
 # Cell 6: View bootstrap summary
-result["bootstrap_summary"]
+print("Bootstrap summary:")
+print(result["bootstrap_summary"])
 
 # Cell 7: Plot bootstrap distributions
-import matplotlib.pyplot as plt
-
 plt.hist(result["bootstrap_raw"]["theory_means"], bins=15, alpha=0.5, label="Theory")
 plt.hist(result["bootstrap_raw"]["data_means"], bins=15, alpha=0.5, label="Data")
 plt.hist(result["bootstrap_raw"]["decor_means"], bins=15, alpha=0.5, label="Decorrelated")
