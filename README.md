@@ -2,8 +2,8 @@
 
 This repository contains Python implementations for computing two multidomain indices:
 
-- **UEDI (Urban/Education Development Index)** – evaluates equity and development across jurisdictions, adjusted for inequalities.
-- **QSI (Quality of Student Experience Index)** – measures student psychological, engagement, and academic experiences using psychometric data.
+- **UEDI (Universal Education Development Index)** – evaluates equity and development across jurisdictions, adjusted for inequalities.
+- **QSI (Quantitative Scoring Index)** – measures student psychological, engagement, and academic experiences using psychometric data.
 
 ---
 
