@@ -23,7 +23,7 @@ The purpose of this repository is to allow researchers and policymakers to **rep
 ---
 
 ## 📂 Repository Structure
-
+```
 uedi-qsi-indices/
 ├─ examples/ # Example scripts & synthetic datasets
 │ ├─ uedi_synthetic.csv
@@ -39,7 +39,7 @@ uedi-qsi-indices/
 ├─ qsi.py # QSI implementation
 ├─ requirements.txt
 └─ README.md
-
+```
 ---
 
 ## ⚙️ Installation
