@@ -26,4 +26,5 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/SaayamChowdhury/UEDI.git
-cd index-codes
+cd UEDI
+
