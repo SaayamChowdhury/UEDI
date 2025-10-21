@@ -84,7 +84,7 @@ python examples/run_index_comparison.py
 
 ## 📧 Contact
 
-For questions or collaborations, reach out at: saayamchowdhury36@gmail.com
+For questions or collaborations, reach out at: saayamchowdhury326@gmail.com
 
 ---
 
