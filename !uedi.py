@@ -1,4 +1,4 @@
-from typing import Optional, Dict
+lfrom typing import Optional, Dict
 import numpy as np
 import pandas as pd
 from scipy.special import logit
@@ -11,8 +11,7 @@ uedi.py
 Compute a Universal Education Development Index (UEDI) for jurisdiction x academic-year
 based on a configurable set of indicators and minimal metadata.
 
-This is a practical, self-contained implementation approximating the methodology
-you provided:
+This is a practical, self-contained implementation approximating the methodology of UEDI:
 - indicator harmonization (logit for proportions, log for monetary, z-scoring)
 - domain factor extraction (first principal component per domain)
 - equity adjustment (Atkinson index from grouped shares + group gap penalties)
@@ -37,7 +36,7 @@ Outputs:
      'uedi_samples' (list of samples), 'domain_scores' (dict of mean domain scores)]
 
 Note: This is a pragmatic implementation for aggregated inputs. For full psychometric/Bayesian
-specifications you'd replace PCA-with-projection by hierarchical Bayesian factor models
+specifications please replace PCA-with-projection by hierarchical Bayesian factor models
 and MCMC sampling (e.g., via PyMC or Stan).
 """
 
@@ -361,3 +360,4 @@ if __name__ == "__main__":
     print("Computing UEDI (this will take a short while)...")
     res = compute_uedi(indicator_df, group_dist_df=group_dist_df, group_gaps_df=group_gaps_df, n_boot=200, random_state=1)
     print(res[['uedi_mean','uedi_p2.5','uedi_p97.5']])
+
